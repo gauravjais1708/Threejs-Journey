@@ -1,4 +1,3 @@
 ﻿# Threejs-Journey
 
-#welcome to my three js journey 
-chapter 1 - lesson 1 
+
