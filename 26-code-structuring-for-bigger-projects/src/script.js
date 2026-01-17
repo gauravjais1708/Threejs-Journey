@@ -1,3 +1,37 @@
+
+// class Robot 
+// {
+//     constructor(name,legs)
+//     {
+//         this.name = name
+//         this.legs = legs
+//     }
+//     sayHi()
+//     {
+//         console.log('Hello, My name is ' + this.name)        
+//     }
+// }
+
+// const wallE = new Robot('Wall-E', 0)
+// const astroBoy = new Robot('Astro Boy', 2)
+// const ultron = new Robot('Ultron', 2)
+// wallE.sayHi()
+// astroBoy.sayHi()
+// ultron.sayHi()
+
+// if(wallE.legs === 0)
+// {
+//     console.log('Wall-E has no legs')
+// }
+//  if(astroBoy.legs >= 2 )
+// {
+//     console.log('yep')
+// }
+import './style.css'
+import Experience from './Experience/Experience.js'
+
+const experience = new Experience()
+
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import GUI from 'lil-gui'
