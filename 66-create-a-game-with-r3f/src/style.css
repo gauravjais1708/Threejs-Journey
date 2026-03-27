@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 html,
 body,
 #root
@@ -7,5 +9,175 @@ body,
     left: 0;
     width: 100%;
     height: 100%;
-    background: ivory;
+    background: #000000;
+}
+
+.interface {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Glassmorphism Panel Base */
+.glass-panel {
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Angled HUD elements */
+.time {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 5vh;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 4px;
+    border-left: 5px solid #ff0055;
+    transform: skewX(-10deg);
+}
+.time span {
+    display: inline-block;
+    transform: skewX(10deg);
+    color: #ff0055;
+    text-shadow: 0 0 10px rgba(255, 0, 85, 0.8);
+}
+
+.level {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px 30px;
+    border-radius: 4px;
+    border-right: 5px solid #00e5ff;
+    transform: skewX(-10deg);
+}
+.level-text {
+    display: inline-block;
+    transform: skewX(10deg);
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+}
+.best-time {
+    font-size: 2vh;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+}
+
+.high-scores {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%) skewX(-10deg);
+    padding: 15px 30px;
+    border-radius: 4px;
+    border-bottom: 5px solid #ffcc00;
+    text-align: center;
+    max-height: 25vh;
+    overflow-y: auto;
+}
+.high-scores-inner {
+    transform: skewX(10deg);
+}
+.high-scores .title {
+    color: #ffcc00;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.high-scores .record {
+    font-size: 2vh;
+    color: #e0e0e0;
+    margin: 4px 0;
+    letter-spacing: 1px;
+}
+
+/* Restart Button */
+.global-restart-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    pointer-events: auto;
+    padding: 15px 30px;
+    font-size: 2.5vh;
+    font-family: 'Oswald', sans-serif;
+    background: rgba(255, 0, 85, 0.1);
+    color: #ff0055;
+    border: 2px solid #ff0055;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transform: skewX(-10deg);
+    transition: all 0.2s ease;
+}
+.global-restart-btn:hover {
+    background: #ff0055;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.6);
+    transform: skewX(-10deg) scale(1.05);
+}
+.global-restart-btn span {
+    display: inline-block;
+    transform: skewX(10deg);
+}
+
+/* Screens */
+.start-screen, .end-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 60px 80px;
+    border-radius: 8px;
+    border-top: 5px solid #ff0055;
+    border-bottom: 5px solid #00e5ff;
+}
+.start-screen h1, .end-screen h1 {
+    font-size: 10vh;
+    margin: 0 0 10px 0;
+    color: white;
+    text-shadow: 4px 4px 0px #ff0055, -4px -4px 0px #00e5ff;
+    letter-spacing: 4px;
+    font-style: italic;
+}
+.start-screen p {
+    font-size: 3vh;
+    color: #a0a0a0;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+.next-btn {
+    pointer-events: auto;
+    margin-top: 40px;
+    padding: 15px 50px;
+    font-size: 4vh;
+    font-family: 'Oswald', sans-serif;
+    background: #ff0055;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+    box-shadow: 0 10px 30px rgba(255, 0, 85, 0.4);
+    transition: all 0.2s ease;
+}
+.next-btn:hover {
+    background: #ff3377;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 0, 85, 0.6);
 }
